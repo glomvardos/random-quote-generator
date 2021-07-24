@@ -1,10 +1,22 @@
-import Layout from './components/Layout'
-import RandomQuote from './components/RandomQuote'
+import Layout from './components/UI/Layout'
+import RandomQuote from './components/RandomQuote/RandomQuote'
+import AuthorQuotes from './components/AuthorQuotes/AuthorQuotes'
+import { Switch, Route, Redirect } from 'react-router-dom'
 
 const App = () => {
   return (
     <Layout>
-      <RandomQuote />
+      <Switch>
+        <Route exact path='/'>
+          <RandomQuote />
+        </Route>
+        <Route exact path='/author-quotes'>
+          <AuthorQuotes />
+        </Route>
+        <Route>
+          <Redirect to='/' />
+        </Route>
+      </Switch>
     </Layout>
   )
 }
