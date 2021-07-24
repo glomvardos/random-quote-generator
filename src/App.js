@@ -1,5 +1,12 @@
+import Layout from './components/Layout'
+import RandomQuote from './components/RandomQuote'
+
 const App = () => {
-  return <div></div>
+  return (
+    <Layout>
+      <RandomQuote />
+    </Layout>
+  )
 }
 
 export default App

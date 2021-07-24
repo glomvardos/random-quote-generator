@@ -1,6 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './index.css'
 import App from './App'
+import { QuoteContextProvider } from './context/QuoteContext'
+import './index.css'
 
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(
+  <QuoteContextProvider>
+    <App />
+  </QuoteContextProvider>,
+  document.getElementById('root')
+)
