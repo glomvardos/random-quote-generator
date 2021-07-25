@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from 'react'
-import { useHistory } from 'react-router-dom'
+// import { useHistory } from 'react-router-dom'
 
 const quoteContext = createContext()
 
@@ -10,7 +10,7 @@ const QuoteContextProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState(null)
 
-  const history = useHistory()
+  // const history = useHistory()
 
   const fetchRandomQuote = async () => {
     setIsLoading(true)
