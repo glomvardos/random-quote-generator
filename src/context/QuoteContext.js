@@ -66,9 +66,9 @@ const QuoteContextProvider = ({ children }) => {
   }
 
   useEffect(() => {
-    history.replace('/')
+    // history.replace('/')
     fetchRandomQuote()
-  }, [history])
+  }, [])
 
   const ctx = {
     randomQuote,
