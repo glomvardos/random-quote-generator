@@ -1,4 +1,4 @@
-import { createContext, useEffect, useLayoutEffect, useState } from 'react'
+import { createContext, useEffect, useState } from 'react'
 import { useHistory } from 'react-router-dom'
 
 const quoteContext = createContext()
@@ -65,13 +65,10 @@ const QuoteContextProvider = ({ children }) => {
     setIsLoading(false)
   }
 
-  useLayoutEffect(() => {
-    history.replace('/')
-  }, [history])
-
   useEffect(() => {
+    history.replace('/')
     fetchRandomQuote()
-  }, [])
+  }, [history])
 
   const ctx = {
     randomQuote,
